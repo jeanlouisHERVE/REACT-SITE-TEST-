@@ -66,11 +66,10 @@ export const NavMenu = styled.ul`
   @media screen and (max-width: 768px) {
     display: none;
   }
-
 `;
 
 export const NavItem = styled.li`
-
+  height: 80px;
 `;
 
 export const NavLinks = styled(LinkS)`
@@ -84,19 +83,16 @@ export const NavLinks = styled(LinkS)`
 
   &.active {
     border-bottom: 3px solid #01bf71;
-
   }
-
 `;
 
 export const NavBtn = styled.nav`
   display:flex;
-  ali-items: center;
+  align-items: center;
 
   @media screen and (max-width : 768px){
     display: none;
   }
-
 `;
 
 export const NavBtnLink = styled(LinkR)`

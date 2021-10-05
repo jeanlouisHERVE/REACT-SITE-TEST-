@@ -12,13 +12,11 @@ import {
   NavBtnLink,
 } from './NavbarElements';
 
-const Navbar = ({ toggle }) => {
-  return (
-    <>
-      <Nav>
-        <NavbarContainer>
-          <NavLogo to="/">Dolla </NavLogo>
-        </NavbarContainer>
+const Navbar = ({ toggle }) => (
+  <>
+    <Nav>
+      <NavbarContainer>
+        <NavLogo to="/">Dolla </NavLogo>
         <MobileIcon onClick={toggle}>
           <FaBars />
         </MobileIcon>
@@ -36,14 +34,14 @@ const Navbar = ({ toggle }) => {
             <NavLinks to="sign Up">Sign Up</NavLinks>
           </NavItem>
         </NavMenu>
-        <NavBtn to="/signin"><NavBtnLink /></NavBtn>
-      </Nav>
-    </>
-  );
-};
+        <NavBtn to="/signin"><NavBtnLink to="/signin">Sign In</NavBtnLink></NavBtn>
+      </NavbarContainer>
+    </Nav>
+  </>
+);
 
 Navbar.propTypes = {
-  toggle: PropTypes.bool.isRequired,
+  toggle: PropTypes.func.isRequired,
 };
 
 export default Navbar;
