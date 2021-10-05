@@ -1,10 +1,10 @@
-import React from 'react';
-import { Fabars } from 'react-icons/fa'
+import { FaBars } from 'react-icons/fa';
+import PropTypes from 'prop-types';
 import {
-  Nav, 
-  NavbarContainer, 
-  NavLogo, 
-  MobileIcon, 
+  Nav,
+  NavbarContainer,
+  NavLogo,
+  MobileIcon,
   NavMenu,
   NavItem,
   NavLinks,
@@ -20,7 +20,7 @@ const Navbar = ({ toggle }) => {
           <NavLogo to="/">Dolla </NavLogo>
         </NavbarContainer>
         <MobileIcon onClick={toggle}>
-          <Fabars />
+          <FaBars />
         </MobileIcon>
         <NavMenu>
           <NavItem>
@@ -36,10 +36,14 @@ const Navbar = ({ toggle }) => {
             <NavLinks to="sign Up">Sign Up</NavLinks>
           </NavItem>
         </NavMenu>
-        <NavBtn to="/signin">   </NavBtn>
+        <NavBtn to="/signin"><NavBtnLink /></NavBtn>
       </Nav>
     </>
   );
-}
+};
 
-export default Navbar
+Navbar.propTypes = {
+  toggle: PropTypes.bool.isRequired,
+};
+
+export default Navbar;

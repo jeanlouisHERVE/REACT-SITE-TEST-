@@ -9,4 +9,4 @@ const rootComponent = (
 );
 
 const target = document.getElementById('root');
-render(rootReactElement, target);
+render(rootComponent, target);

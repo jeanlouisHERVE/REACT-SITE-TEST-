@@ -1,14 +1,18 @@
-import React from 'react'
-import { 
+import PropTypes from 'prop-types';
+import {
   SidebarContainer,
   Icon,
   CloseIcon,
-} from './SidebarElements'
+  SideBtnWrap,
+  SidebarLink,
+  SidebarMenu,
+  SidebarRoute,
+  SidebarWrapper,
+} from './SidebarElements';
 
-
-const Sidebar = ({ isOpen, toggle}) => {
+const Sidebar = ({ isOpen, toggle }) => {
   return (
-    <SidebarContainer isOpen = {isOpen} onClick={toggle}>
+    <SidebarContainer isOpen={isOpen} onClick={toggle}>
       <Icon onClick={toggle}>
         <CloseIcon />
       </Icon>
@@ -32,7 +36,12 @@ const Sidebar = ({ isOpen, toggle}) => {
         </SideBtnWrap>
       </SidebarWrapper>
     </SidebarContainer>
-  )
-}
+  );
+};
 
-export default Sidebar
+Sidebar.propTypes = {
+  toggle: PropTypes.bool.isRequired,
+  isOpen: PropTypes.bool.isRequired,
+};
+
+export default Sidebar;
