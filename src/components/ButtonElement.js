@@ -10,7 +10,7 @@ export const Button = styled(Link)`
   font-size: ${({ fontBig }) => (fontBig ? '20px' : '16px')};
   outline: none;
   border: none;
-  cursor: pointer; 
+  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,5 +21,3 @@ export const Button = styled(Link)`
     background: ${({ primary }) => (primary ? '#fff' : '#01BF71')};
 }
 `;
-
-export const Empty = 0;

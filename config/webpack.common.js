@@ -82,18 +82,29 @@ module.exports = {
         ],
       },
 
-      {
-        test: /\.mp4$/,
-        use: [
-            {
-                loader: "file-loader",
-                options: {
-                    name: "[name].[ext]",
-                    outputPath: "videos/"
-                }
-            }
-        ]
-    }
+      // Videos
+      // {
+      //   test: /\.(mp4)$/i,
+      //   use: [
+      //     {
+      //       loader: 'file-loader',
+      //       options: { outputPath: 'videos/' },
+      //     },
+      //   ],
+      // },
+
+    //   {
+    //     test: /\.mp4$/,
+    //     use: [
+    //         {
+    //             loader: "file-loader",
+    //             options: {
+    //                 name: "[name].[ext]",
+    //                 outputPath: "videos/"
+    //             }
+    //         }
+    //     ]
+    // }
 
     ],
   },

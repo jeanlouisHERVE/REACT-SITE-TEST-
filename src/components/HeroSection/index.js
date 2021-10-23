@@ -3,7 +3,8 @@ import { Button } from '../ButtonElement';
 import {
   HeroContainer,
   HeroBg,
-  VideoBg,
+  // VideoBg,
+  ImgBg,
   HeroH1,
   HeroP,
   HeroBtnWrapper,
@@ -11,6 +12,8 @@ import {
   ArrowRight,
   HeroContent,
 } from './HeroElements';
+import Picture from '../../assets/images/cnossos.jpg';
+// import Video from '../../assets/videos/wave.mp4';
 
 const HeroSection = () => {
   const [hover, setHover] = useState(false);
@@ -22,7 +25,8 @@ const HeroSection = () => {
   return (
     <HeroContainer id="home">
       <HeroBg>
-        <VideoBg autoplay loop muted src="../../assets/vid/wave.mp4" type="video/mp4" />
+        {/* <VideoBg autoplay loop muted src={Video} type="video/mp4" /> */}
+        <ImgBg alt="" src={Picture} />
       </HeroBg>
       <HeroContent>
         <HeroH1>Lorem ipsum dolor sit amet</HeroH1>
